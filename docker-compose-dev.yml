@@ -1,0 +1,11 @@
+version: '3'
+services:
+
+  corpus-tagger-compose:
+    build:    
+      context: "./"
+      dockerfile: ./Dockerfile    
+    ports:
+     - 8501:8501
+    tty: true
+    stdin_open: true
