@@ -21,6 +21,10 @@ With the application users can:
 6. explore single texts
 7. practice advanced plotting
 
+# Administration and Support
+
+This project and repository fork is supported and maintained by the Eberly Center at Carnegie Mellon University. For help with this fork, project or service please contact eberly-assist@andrew.cmu.edu.
+
 # Installation and Running
 
 We provide a number of convenience shell scripts that allow you to rapidly deploy and manage this project on a server. These shells are standardized across the Eberly Center at CMU and you will find the same basic set in every project.
