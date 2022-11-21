@@ -23,36 +23,38 @@ With the application users can:
 
 # Installation and Running
 
+We provide a number of convenience shell scripts that allow you to rapidly deploy and manage this project on a server. These shells are standardized across the Eberly Center at CMU and you will find the same basic set in every project.
+
 ## Using Docker
 
 1. Clone the repository with: git clone https://github.com/CMUEberlyCenter/eberly-docuscope-ca
 2. Change into the project directory: cd eberly-docuscope-ca
-3. Build the docker image: ./run-dockerfile-build.sh
-4. Run the docker image: ./run-dockerfile.sh
+3. Build the docker image: **./run-dockerfile-build.sh**
+4. Run the docker image: **./run-dockerfile.sh**
 
 ## Using docker-compose on a production machine
 
 1. Clone the repository with: git clone https://github.com/CMUEberlyCenter/eberly-docuscope-ca
 2. Change into the project directory: cd eberly-docuscope-ca
-3. Build the docker image: ./run-dockerfile-build.sh
-4. Run the docker image (in dev mode): ./run-compose-dev.sh
+3. Build the docker image: **./run-dockerfile-build.sh**
+4. Run the docker image (in dev mode): **./run-compose-dev.sh**
 
 ## Local installation on Machine
 
 1. Clone the repository with: git clone https://github.com/CMUEberlyCenter/eberly-docuscope-ca
 2. Change into the project directory: cd eberly-docuscope-ca
-3. Let Pip install the dependencies and libraries: ./run-install.sh
-4. If successful, execute the application locally on the machine: ./run.sh
+3. Let Pip install the dependencies and libraries: **./run-install.sh**
+4. If successful, execute the application locally on the machine: **./run.sh**
 
 # Shells and DevOps files
 
-docker-compose-dev.yml
-docker-compose-prod.yml
-Dockerfile
-run-compose-dev.sh
-run-compose-prod.sh
-run-dockerfile-build.sh
-run-dockerfile.sh
-run-install.sh
-run.sh
-run-upgrade.sh
+* **docker-compose-dev.yml**
+* **docker-compose-prod.yml**
+* **Dockerfile**
+* **run-compose-dev.sh**
+* **run-compose-prod.sh**
+* **run-dockerfile-build.sh**
+* **run-dockerfile.sh**
+* **run-install.sh**
+* **run.sh**
+* **run-upgrade.sh**
