@@ -66,4 +66,6 @@ We provide a number of convenience shell scripts that allow you to rapidly deplo
 
 * **run.sh** The most direct and barebones execution of the system. Assumes you've executed **./run-install.sh**
 
-* **run-upgrade.sh**
+* **run-upgrade.sh** Does a number of package management tasks depending on the platform and project. Upgrades package.json in the case of a webpack or node project. Upgrades pip, python, etc in the case of a Python project
+
+
