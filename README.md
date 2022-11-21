@@ -23,7 +23,7 @@ With the application users can:
 
 # Administration and Support
 
-This project and repository fork is supported and maintained by the Eberly Center at Carnegie Mellon University. For help with this fork, project or service please contact eberly-assist@andrew.cmu.edu.
+This project and repository fork is supported and maintained by the [Eberly Center](https://www.cmu.edu/teaching/) at [Carnegie Mellon University](www.cmu.edu). For help with this fork, project or service please contact eberly-assist@andrew.cmu.edu.
 
 # Installation and Running
 
