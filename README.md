@@ -60,10 +60,10 @@ We provide a number of convenience shell scripts that allow you to rapidly deplo
 
 * **run-dockerfile-build.sh** A convenience shell script to build the docker image using the **Dockerfile** file. This script does various checks to verify a system meets the minimum requirements
 
-* **run-dockerfile.sh**
+* **run-dockerfile.sh** Runs the Dockerfile directly through the command line. It makes sure the ports are properly mapped to be used by the outside and it provides a tag so that the resulting container can be easily found when doing a 'Docker ps' or other listing command. Use this option mostly for debugging and use the docker-compose option for production deployment
 
-* **run-install.sh**
+* **run-install.sh** Installs the required dependencies for local execution (non Docker, non docker-compose). Will do some basic checks on the operating system to verify the prep and installation will succeed
 
-* **run.sh**
+* **run.sh** The most direct and barebones execution of the system. Assumes you've executed **./run-install.sh**
 
 * **run-upgrade.sh**
