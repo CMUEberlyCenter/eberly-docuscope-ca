@@ -49,12 +49,21 @@ We provide a number of convenience shell scripts that allow you to rapidly deplo
 # Shells and DevOps files
 
 * **docker-compose-dev.yml** Development version of the docker-compose configuration. Works the same as the production version except the images aren't automatically restarted. The Compose file is a YAML file defining services, networks, and volumes for a Docker application. The latest and recommended version of the Compose file format is defined by the Compose Specification.
+
 * **docker-compose-prod.yml** Production version of the docker-compose configuration. Meant to be executed as a deamon (see production shell) and all the images are configured to restart automatically. The Compose file is a YAML file defining services, networks, and volumes for a Docker application. The latest and recommended version of the Compose file format is defined by the Compose Specification.
+
 * **Dockerfile** Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. 
-* **run-compose-dev.sh**
-* **run-compose-prod.sh**
-* **run-dockerfile-build.sh**
+
+* **run-compose-dev.sh** A bash script to run the development version of the project. Use this to see debug output in your console or if you want to run the project in a non-deamon/non-background fashion. Used frequently in a screen session. Uses docker-compose-dev.yml
+
+* **run-compose-prod.sh** A bash script to run the production version of the project. This script is equivalent to how the project will be run on a server. Sometimes the script is used as-is by our Saltstack configuration. Note that this will not show debug output on the console when run. Uses docker-compose-prod.yml
+
+* **run-dockerfile-build.sh** A convenience shell script to build the docker image using the **Dockerfile** file. This script does various checks to verify a system meets the minimum requirements
+
 * **run-dockerfile.sh**
+
 * **run-install.sh**
+
 * **run.sh**
+
 * **run-upgrade.sh**
