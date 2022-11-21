@@ -48,9 +48,9 @@ We provide a number of convenience shell scripts that allow you to rapidly deplo
 
 # Shells and DevOps files
 
-* **docker-compose-dev.yml**
-* **docker-compose-prod.yml**
-* **Dockerfile**
+* **docker-compose-dev.yml** Development version of the docker-compose configuration. Works the same as the production version except the images aren't automatically restarted. The Compose file is a YAML file defining services, networks, and volumes for a Docker application. The latest and recommended version of the Compose file format is defined by the Compose Specification.
+* **docker-compose-prod.yml** Production version of the docker-compose configuration. Meant to be executed as a deamon (see production shell) and all the images are configured to restart automatically. The Compose file is a YAML file defining services, networks, and volumes for a Docker application. The latest and recommended version of the Compose file format is defined by the Compose Specification.
+* **Dockerfile** Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. 
 * **run-compose-dev.sh**
 * **run-compose-prod.sh**
 * **run-dockerfile-build.sh**
