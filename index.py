@@ -16,8 +16,8 @@ import utilities
 import categories as _categories
 import states as _states
 
-import prometheus;
-driver=prometheus.PythonPrometheus ();
+#import prometheus;
+#driver=prometheus.PythonPrometheus ();
 
 HERE = pathlib.Path(__file__).parent.resolve()
 FAVICON = str(HERE.joinpath("_static/docuscope-favicon.ico"))
