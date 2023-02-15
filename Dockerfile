@@ -17,4 +17,4 @@ RUN pip install streamlit --upgrade
 RUN pip install -r requirements.txt
 
 #ENTRYPOINT ["streamlit"]
-CMD ["streamlit","run","./corpus_analysis.py","--server.headless","true","--server.port","8501","serverAddress","0.0.0.0"]
+CMD ["streamlit","run","./index.py","--server.headless","true","--server.port","8501","serverAddress","0.0.0.0"]
