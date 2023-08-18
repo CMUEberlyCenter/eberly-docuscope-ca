@@ -28,6 +28,7 @@ from importlib.machinery import SourceFileLoader
 #driver=prometheus.PythonPrometheus ();
 
 HERE = pathlib.Path(__file__).parent.resolve()
+TEMP_DIR = HERE.joinpath("_temp")
 FAVICON = str(HERE.joinpath("_static/docuscope-favicon.ico"))
 TITLE_LOGO = str(HERE.joinpath("_static/docuscope-logo.png"))
 PL_LOGO = str(HERE.joinpath("_static/porpoise_badge.svg"))
@@ -55,11 +56,16 @@ for module in import_params.keys():
 		context_module = __import__(context_module_name, fromlist=[object_name])
 		globals()[short_name] = getattr(context_module, object_name)
 
-_handlers.generate_temp(_states.STATES.items())
+user_session = st.runtime.scriptrunner.script_run_context.get_script_run_ctx()
+user_session_id = user_session.session_id
+
+_handlers.generate_temp(_states.STATES.items(), user_session_id)
 
 def index(application_options):
     if not sys.warnoptions:
         warnings.simplefilter("ignore")
+
+    _handlers.cleanup_temp(TEMP_DIR, 1) 
     
     with open(PL_LOGO, encoding='utf-8', errors='ignore') as f:
         pl_logo_text = f.read()

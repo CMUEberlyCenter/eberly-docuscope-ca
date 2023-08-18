@@ -23,6 +23,62 @@ With the application users can:
 6. explore single texts
 7. practice advanced plotting
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+# Administration and Support
+
+This project and repository fork is supported and maintained by the [Eberly Center](https://www.cmu.edu/teaching/) at [Carnegie Mellon University](www.cmu.edu). For help with this fork, project or service please contact eberly-assist@andrew.cmu.edu.
+
+# Installation and Running
+
+We provide a number of convenience shell scripts that allow you to rapidly deploy and manage this project on a server. These shells are standardized across the Eberly Center at CMU and you will find the same basic set in every project.
+
+## Using Docker
+
+1. Clone the repository with: git clone https://github.com/CMUEberlyCenter/eberly-docuscope-ca
+2. Change into the project directory: cd eberly-docuscope-ca
+3. Build the docker image: **./run-dockerfile-build.sh**
+4. Run the docker image: **./run-dockerfile.sh**
+
+## Using docker-compose on a production machine
+
+1. Clone the repository with: git clone https://github.com/CMUEberlyCenter/eberly-docuscope-ca
+2. Change into the project directory: cd eberly-docuscope-ca
+3. Build the docker image: **./run-dockerfile-build.sh**
+4. Run the docker image (in dev mode): **./run-compose-dev.sh**
+
+## Local installation on Machine
+
+1. Clone the repository with: git clone https://github.com/CMUEberlyCenter/eberly-docuscope-ca
+2. Change into the project directory: cd eberly-docuscope-ca
+3. Let Pip install the dependencies and libraries: **./run-install.sh**
+4. If successful, execute the application locally on the machine: **./run.sh**
+
+# Shells and DevOps files
+
+* **docker-compose-dev.yml** Development version of the docker-compose configuration. Works the same as the production version except the images aren't automatically restarted. The Compose file is a YAML file defining services, networks, and volumes for a Docker application. The latest and recommended version of the Compose file format is defined by the Compose Specification.
+
+* **docker-compose-prod.yml** Production version of the docker-compose configuration. Meant to be executed as a deamon (see production shell) and all the images are configured to restart automatically. The Compose file is a YAML file defining services, networks, and volumes for a Docker application. The latest and recommended version of the Compose file format is defined by the Compose Specification.
+
+* **Dockerfile** Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. 
+
+* **run-compose-dev.sh** A bash script to run the development version of the project. Use this to see debug output in your console or if you want to run the project in a non-deamon/non-background fashion. Used frequently in a screen session. Uses docker-compose-dev.yml
+
+* **run-compose-prod.sh** A bash script to run the production version of the project. This script is equivalent to how the project will be run on a server. Sometimes the script is used as-is by our Saltstack configuration. Note that this will not show debug output on the console when run. Uses docker-compose-prod.yml
+
+* **run-dockerfile-build.sh** A convenience shell script to build the docker image using the **Dockerfile** file. This script does various checks to verify a system meets the minimum requirements
+
+* **run-dockerfile.sh** Runs the Dockerfile directly through the command line. It makes sure the ports are properly mapped to be used by the outside and it provides a tag so that the resulting container can be easily found when doing a 'Docker ps' or other listing command. Use this option mostly for debugging and use the docker-compose option for production deployment
+
+* **run-install.sh** Installs the required dependencies for local execution (non Docker, non docker-compose). Will do some basic checks on the operating system to verify the prep and installation will succeed
+
+* **run.sh** The most direct and barebones execution of the system. Assumes you've executed **./run-install.sh**
+
+* **run-upgrade.sh** Does a number of package management tasks depending on the platform and project. Upgrades package.json in the case of a webpack or node project. Upgrades pip, python, etc in the case of a Python project
+
+
+=======
+=======
 Note: The version that is available on streamlit Community Cloud does not consistently render tables from `st-aggrid`. You can explore and get idea of how the tool works, but if you want to process data, it recommended that you clone this repository, navigate to the directory and run:
 
 ```
@@ -37,6 +93,7 @@ Video tutorials are available.
 
 [Introduction](https://youtu.be/2fSF8RelN88)
 
+>>>>>>> upstream/main
 ## Elesevier Corpus
 
 For convenience, DocuScope CAC come with some pre-processed data. One of those was compiled specifically for the tool. It contains published academic articles, which were harvested from Elesevier open access. The entire dataset includes more than 40,000 articles. The data processed and saved for the tool have 20 randomly sampled articles from 20 disciplines.
@@ -351,7 +408,7 @@ For convenience, DocuScope CAC come with some pre-processed data. One of those w
 |S1053811919309267|10.1016/j.neuroimage.2019.116335  |2020    |NEUR     |Neuroscience                                |Multi-site harmonization of 7 tesla MRI neuroimaging protocols                                                                                                                                                                  |
 |S105381191501037X|10.1016/j.neuroimage.2015.11.015  |2016    |NEUR     |Neuroscience                                |Bayesian model reduction and empirical Bayes for group (DCM) studies                                                                                                                                                            |
 |S1053811914006338|10.1016/j.neuroimage.2014.07.050  |2014    |NEUR     |Neuroscience                                |Global intravascular and local hyperoxia contrast phase-based blood oxygenation measurements                                                                                                                                    |
-|S0896627317306384|10.1016/j.neuron.2017.07.016      |2017    |NEUR     |Neuroscience                                |RNA Docking and Local Translation Regulate Site-Specific Axon Remodeling In Vivo                                                                                                                                                |
+|S0896627317306384|10.1016/j.neuron.2017.07.016      |2017    |NEUR     |Neuroscience                                |RNA Docking and Local Translation Regulate Site-Specific Axon Remodeling In Vivo                                                                                                                                                |
 |S1053811916000616|10.1016/j.neuroimage.2016.01.046  |2016    |NEUR     |Neuroscience                                |Bingham-NODDI: Mapping anisotropic orientation dispersion of neurites using diffusion MRI                                                                                                                                       |
 |S1053811916303901|10.1016/j.neuroimage.2016.08.012  |2016    |NEUR     |Neuroscience                                |Atypical right hemisphere response to slow temporal modulations in children with developmental dyslexia                                                                                                                         |
 |S1053811915009660|10.1016/j.neuroimage.2015.10.055  |2016    |NEUR     |Neuroscience                                |Brain basis of communicative actions in language                                                                                                                                                                                |
@@ -445,3 +502,4 @@ For convenience, DocuScope CAC come with some pre-processed data. One of those w
 |S0967070X17305000|10.1016/j.tranpol.2018.11.003     |2019    |SOCI     |Social Sciences                             |Transportation resilience to climate change and extreme weather events – Beyond risk and robustness                                                                                                                             |
 |S0277539515301783|10.1016/j.wsif.2016.08.004        |2017    |SOCI     |Social Sciences                             |Challenges for women's participation in communal forests: Experience from Nicaragua's in digenous territories                                                                                                                   |
 |S1353829216305056|10.1016/j.healthplace.2016.11.013 |2017    |SOCI     |Social Sciences                             |Associations between perceived neighbourhood problems and quality of life in older adults with and without osteoarthritis: Results from the Hertfordshire Cohort Study                                                          |
+>>>>>>> upstream/main
