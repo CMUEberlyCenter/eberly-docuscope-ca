@@ -58,7 +58,7 @@ def main():
 		df = _handlers.load_table('kwic', user_session_id)	
 		
 		gb = st_aggrid.GridOptionsBuilder.from_dataframe(df)
-		gb.configure_pagination(paginationAutoPageSize=False, paginationPageSize=100) #Add pagination
+		gb.configure_pagination(paginationAutoPageSize=False, paginationPageSize=25) #Add pagination
 		gb.configure_default_column(filter="agTextColumnFilter")
 		gb.configure_column("Doc ID", filter="agTextColumnFilter", headerCheckboxSelection = True, headerCheckboxSelectionFilteredOnly = True)
 		gb.configure_column("Pre-Node", type="rightAligned")
@@ -74,7 +74,7 @@ def main():
 			update_mode='MODEL_CHANGED', 
 			columns_auto_size_mode='FIT_CONTENTS',
 			theme='alpine',
-			height=500, 
+			height=None, 
 			width='100%',
 			reload_data=False
 			)

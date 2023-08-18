@@ -77,7 +77,7 @@ def main():
 				st.markdown(_messages.message_reference_info(metadata_reference))	
 		
 			gb = st_aggrid.GridOptionsBuilder.from_dataframe(df)
-			gb.configure_pagination(paginationAutoPageSize=False, paginationPageSize=100) #Add pagination
+			gb.configure_pagination(paginationAutoPageSize=False, paginationPageSize=25) #Add pagination
 			gb.configure_column("Token", filter="agTextColumnFilter", headerCheckboxSelection = True, headerCheckboxSelectionFilteredOnly = True)
 			gb.configure_column("Tag", filter="agTextColumnFilter")
 			gb.configure_column("LL", type=["numericColumn","numberColumnFilter","customNumericFormat"], precision=2)
@@ -99,7 +99,7 @@ def main():
 				update_mode='MODEL_CHANGED', 
 				columns_auto_size_mode='FIT_CONTENTS',
 				theme='alpine',
-				height=500, 
+				height=None, 
 				width='100%',
 				reload_data=False
 				)
@@ -146,7 +146,7 @@ def main():
 				st.markdown(_messages.message_reference_info(metadata_reference))			
 		
 			gb = st_aggrid.GridOptionsBuilder.from_dataframe(df)
-			gb.configure_pagination(paginationAutoPageSize=False, paginationPageSize=100) #Add pagination
+			gb.configure_pagination(paginationAutoPageSize=False, paginationPageSize=25) #Add pagination
 			gb.configure_column("Tag", filter="agTextColumnFilter", headerCheckboxSelection = True, headerCheckboxSelectionFilteredOnly = True)
 			gb.configure_column("LL", type=["numericColumn","numberColumnFilter","customNumericFormat"], precision=2)
 			gb.configure_column("LR", type=["numericColumn","numberColumnFilter","customNumericFormat"], precision=3)
@@ -167,7 +167,7 @@ def main():
 				update_mode='MODEL_CHANGED', 
 				columns_auto_size_mode='FIT_CONTENTS',
 				theme='alpine',
-				height=500, 
+				height=None, 
 				width='100%',
 				reload_data=False
 				)
