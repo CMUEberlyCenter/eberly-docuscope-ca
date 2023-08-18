@@ -1,2 +1,2 @@
 clear
-git merge upstreaim/main main
+git merge upstream/main main
